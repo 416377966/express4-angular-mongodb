@@ -1,0 +1,32 @@
+<h1>User</h1>
+搜索用户 <input type="text" ng-model="searchuser"/> <button ng-click="search()">搜索</button>
+<table>
+    <thead>
+        <tr>
+            <td>用户名</td>
+            <td>邮箱</td>
+            <td>更新日期</td>
+            <td>注册日期</td>
+            <td>操作</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in users" ng-init="editemode=0">
+            <td>
+                <span ng-if="editmode!=user._id">{{user.username}}</span>
+                <input ng-if="editmode==user._id"
+                       type="text"
+                       ng-value="user.username"
+                       ng-model="user.userupdate.username"/></td>
+            <td>
+                <span ng-if="editmode!=user._id">{{user.contact.email}}</span>
+                <input ng-if="editmode==user._id"
+                       type="text"
+                       ng-value="user.contact.email"
+                       ng-model="user.userupdate.email"/></td>
+            <td>{{user.update_date | date : 'yyyy-MM-dd hh:mm'}}</td>
+            <td>{{user.create_date | date : 'yyyy-MM-dd hh:mm'}}</td>
+            <td><a ng-if="editmode!=user._id" ng-click="edit(user._id)">编辑</a><a ng-if="editmode==user._id" ng-click="submit(this)">确定</a><a ng-if="editmode==user._id" ng-click="cancel()">取消</a><a ng-click="delete(user._id)">删除</a></td>
+        </tr>
+    </tbody>
+</table>

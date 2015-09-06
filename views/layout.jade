@@ -1,0 +1,21 @@
+doctype html
+html(ng-app="myApp")
+  head
+    meta(charset='utf8')
+    base(href='/')
+    title= title
+    link(rel='stylesheet', href='/dist/styles/main.css')
+  body
+    block content
+
+  script(src='/javascripts/lib/jquery/dist/jquery.min.js')
+  script(src='/javascripts/lib/underscore/underscore-min.js')
+  script(src='/javascripts/lib/angular/angular.js')
+  script(src='/javascripts/lib/angular-route/angular-route.js')
+  script(src='/javascripts/lib/angular-ui-router/release/angular-ui-router.js')
+  script(src='/javascripts/lib/angular-messages/angular-messages.js')
+  script(src='/javascripts/app.js')
+  script(src='/javascripts/services/mainServices.js')
+  script(src='/javascripts/controllers/mainControllers.js')
+  script(src='/javascripts/filters/mainFilters.js')
+  script(src='/javascripts/directives/mainDirectives.js')

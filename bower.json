@@ -1,0 +1,24 @@
+{
+  "name": "website",
+  "version": "0.0.0",
+  "authors": [
+    "Superwen <swim1986@126.com>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-messages": "~1.4.5",
+    "angular-route": "~1.4.5",
+    "angular-ui-router": "~0.2.15",
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3"
+  }
+}

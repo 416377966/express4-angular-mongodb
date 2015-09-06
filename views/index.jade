@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  div(ng-controller='AppCtrl')
+    h2 Hello {{name}}
+    ul.menu
+      li
+        a(href='/') 首页
+      li
+        a(href='user') 用户
+      li
+        a(href='add') 添加
+
+    div(ng-view="")
+
+
+
+    div
+      | Angular seed app: v
+      span(app-version)
